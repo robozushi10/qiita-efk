@@ -2,10 +2,10 @@
 
 | No | サービス | ホスト側ポート | コンテナ側ポート | 備考 |
 |:--|:--|:--|:--|:--|
-| 1 | Nginx | 21337 | 80 | Fluentd のテストのために導入しているだけ. No 2 の 24224 へログを送る. |
+| 1 | Nginx | 21337 | 80 | Fluentd のテストのために導入しているだけ.<br/>No 2 の 24224 へログを送る. |
 | 2 | Fluentd | 24224 | 24224 | 受信したログを No 3 へ送る |
-| 3 | Fluentd | 34224 | 34224 | 受信したログを stdout へ出力する. Elasticsearch との連携はまだである. |
-| 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア. 日本語検索をするための kuromoji 導入あり |
+| 3 | Fluentd | 34224 | 34224 | 受信したログを stdout へ出力する.<br/>Elasticsearch との連携はまだである. |
+| 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア.<br/>日本語検索をするための kuromoji 導入あり |
 | 5 | Kibana | 29601 | 29601 | Elasticsearch 閲覧 |
 
 
@@ -23,7 +23,7 @@ $ docker-compose up -d
 |書籍|
 |:---|
 |[nginx実践入門](https://gihyo.jp/book/2016/978-4-7741-7866-0)|
-|[「Docker/Kubernetes 実践コンテナ開発入門 | 山田 明憲」](https://gihyo.jp/book/2018/978-4-297-10033-9)|
+|[「Docker/Kubernetes 実践コンテナ開発入門  山田 明憲」](https://gihyo.jp/book/2018/978-4-297-10033-9)|
 |[データ分析基盤構築入門［Fluentd，Elasticsearch，Kibanaによるログ収集と可視化］](https://gihyo.jp/book/2017/978-4-7741-9218-5)|
 |[検索だけじゃない Elasticsearch 入門+](https://booth.pm/ja/items/1031664)|
 
