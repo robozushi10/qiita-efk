@@ -1,8 +1,8 @@
 # 概要
 
-docker-compose を用いて、下表・下図のような Elasticsearch + Fluentd + Kibana (EFK) 環境を構築する.
-Elasticsearch, Kibana バージョンは 7.14 である.
-なお、Fluentd を 2つ配置しているのは当方の都合である.
+docker-compose を用いて、下表・下図のような Elasticsearch + Fluentd + Kibana (EFK) 環境を構築する.<br/>
+Elasticsearch, Kibana バージョンは 7.14 である.<br/>
+なお、Fluentd を 2つ配置しているのは当方の都合である.<br/>
 
 　
 
