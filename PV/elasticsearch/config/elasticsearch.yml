@@ -1,0 +1,36 @@
+## 公式ドキュメント: https://www.elastic.co/guide/en/elasticsearch/reference/7.14/important-settings.htm
+## 参考記事: http://www.tech-joy.work/article/a20180527115811.html
+
+## 今回は Elasticsearch コンテナは 1個なので single-node と記述する.
+## https://www.elastic.co/guide/en/elasticsearch/reference/current/modules-discovery-settings.html
+discovery.type: "single-node"
+
+## ヒープのみ使用しスワップは使わない.
+## Dockerでの運用だとどうなるのか不明だが、true としている人が多いので定義をしてみる.
+## swapoff -a を恒久設定している場合
+bootstrap.memory_lock: true 
+
+## クラスタ名. 目的に応じたクラスタ名が良いとはある.
+cluster.name: "docker-cluster"
+
+## どの NIC から待ち受けするかを定義する. 0.0.0.0 の場合は全ての NIC となる. 
+## https://www.elastic.co/guide/en/elasticsearch/reference/7.14/modules-network.html
+network.host: 0.0.0.0
+
+## HTTP Client との通信用ポート. 指定が無ければ 9200-9300 のポートを使う.
+## https://www.elastic.co/guide/en/elasticsearch/reference/7.14/modules-network.html
+http.port: 29200
+
+## 「xpack.monitoring.enabled: true」は deprecated とある.
+## 代わりに下記を使えば良いのだと思う.
+## https://www.elastic.co/guide/en/elasticsearch/reference/current/monitoring-settings.html
+xpack.monitoring.collection.enabled: true
+
+## watcher は通知に関する設定である.
+## https://www.elastic.co/guide/en/elasticsearch/reference/7.14/notification-settings.html
+xpack.watcher.enabled: true
+
+## インデックス削除のときに「*」による指定を認めない(true). 
+## https://www.elastic.co/guide/en/elasticsearch/reference/7.14/index-management-settings.html
+action.destructive_requires_name: true
+

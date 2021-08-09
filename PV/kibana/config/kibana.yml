@@ -1,0 +1,10 @@
+#
+# ** THIS IS AN AUTO-GENERATED FILE **
+#
+
+# Default Kibana configuration for docker target
+server.host: "0"
+server.port: "29601"
+server.shutdownTimeout: "5s"
+elasticsearch.hosts: [ "http://elasticsearch:29200" ]
+
