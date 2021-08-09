@@ -4,7 +4,7 @@
 |:--|:--|:--|:--|:--|
 | 1 | Nginx | 21337 | 80 | Fluentd のテストのために導入しているだけ.<br/>No 2 の Fluentd(24224) へログを配送する. |
 | 2 | Fluentd | 24224 | 24224 | 受信したログを No 3 の Fluentd(34224)へ転送する |
-| 3 | Fluentd | 34224 | 34224 | 受信したログを stdout へ出力する.<br/>Elasticsearch との連携はまだである.<br/>最終的には Nginx のログを Elasticsearch に送り込む.|
+| 3 | Fluentd | 34224 | 34224 | 受信したログを stdout へ出力する.<br/>Elasticsearch との連携はまだである.<br/>最終的には Nginx のログを Elasticsearch に送り込む予定である.|
 | 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア.<br/>日本語検索をするための kuromoji 導入あり |
 | 5 | Kibana | 29601 | 29601 | Elasticsearch 閲覧 |
 
