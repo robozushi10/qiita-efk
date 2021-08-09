@@ -19,7 +19,7 @@ services:
       - elasticsearch
       - kibana
   fluentd:
-    image: fluent/fluentd:v1.3.2
+    image: fluent/fluentd:v1.13-1
     container_name: myfld_fluentd
     restart: always
     command: >
@@ -31,7 +31,7 @@ services:
       - ./PV/fluentd/log:/fluentd/log
       - ./PV/fluentd/etc:/fluentd/etc
   fluentd2:
-    image: fluent/fluentd:v1.3.2
+    image: fluent/fluentd:v1.13-1
     container_name: myfld_fluentd2
     restart: always
     command: >
