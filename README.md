@@ -1,3 +1,12 @@
+# 概要
+
+下表・下図のような Elasticsearch + Fluentd + Kibana (EFK) 環境.
+
+Elasticsearch, Kibana は 7.14 である.
+
+Fluentd を 2つ配置しているのは、当方の都合である.
+
+
 # 構成
 
 | No | サービス | ホスト側ポート | コンテナ側ポート | 備考 |
