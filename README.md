@@ -5,9 +5,12 @@
 | 1 | Nginx | 21337 | 80 | Fluentd のテストのために導入しているだけ.<br/>No 2 の 24224 へログを送る. |
 | 2 | Fluentd | 24224 | 24224 | 受信したログを No 3 へ送る |
 | 3 | Fluentd | 34224 | 34224 | 受信したログを stdout へ出力する.<br/>Elasticsearch との連携はまだである.<br/>最終的には Nginx のログを Elasticsearch に送り込む.|
-| 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア. 日本語検索をするための kuromoji 導入あり |
+| 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア.<br/>日本語検索をするための kuromoji 導入あり |
 | 5 | Kibana | 29601 | 29601 | Elasticsearch 閲覧 |
 
+![image](https://user-images.githubusercontent.com/86971991/128673300-6a2ba969-6c0c-4fc1-85fc-d22261379f0e.png)
+
+　
 
 # 起動方法
 
@@ -17,6 +20,8 @@ $ docker-compose up -d
 $ docker-compose build --no-cache
 $ docker-compose up -d
 ```
+
+　
 
 # 参考にした書籍およびサイト
 
