@@ -16,7 +16,7 @@ Elasticsearch, Kibana バージョンは 7.14 である.<br/>
 | 4 | Elasticsearch | 29200 | 29200 | ログ格納のためのデータストア.<br/>日本語検索をするための kuromoji 導入あり |
 | 5 | Kibana | 29601 | 29601 | Elasticsearch 閲覧 |
 
-![image](https://user-images.githubusercontent.com/86971991/128673300-6a2ba969-6c0c-4fc1-85fc-d22261379f0e.png)
+![image.png](https://qiita-image-store.s3.ap-northeast-1.amazonaws.com/0/1246056/957f2884-bcf2-a8d1-379b-7a425c69c492.png)
 
 　
 
