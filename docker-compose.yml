@@ -32,6 +32,7 @@ services:
       - ./PV/fluentd/etc:/fluentd/etc
   fluentd2:
     image: fluent/fluentd:v1.13-1
+    build: assets/fluentd2
     container_name: myfld_fluentd2
     restart: always
     command: >
@@ -56,6 +57,7 @@ services:
         hard: -1
     volumes:
       - ./PV/elasticsearch/config/elasticsearch.yml:/usr/share/elasticsearch/config/elasticsearch.yml
+      - myfld_elasticsearch_fluentd2_vol:/usr/share/elasticsearch/data
 #=> ローカルボリュームを使うと Java で Exception が生じてしまう. 外付け SSD でマウントしているから？. 理由不明.
 #     - ./PV/elasticsearch/data:/usr/share/elasticsearch/data
 #=> 公式サイトを見ると JVM のパラメータは環境変数で設定していたので, ファイルによる設定はしないようにする
@@ -78,4 +80,6 @@ services:
       - fluentd
       - fluentd2
       - elasticsearch
+volumes:
+  myfld_elasticsearch_fluentd2_vol:
 
